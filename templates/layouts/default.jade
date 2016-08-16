@@ -57,10 +57,10 @@ html
 						ul.nav.navbar-nav.navbar-right
 							if user
 								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
+									li: a(href='/keystone') Admin
+								li: a(href='/keystone/signout') Logout
 							else
-								li: a(href='/keystone/signin') Sign In
+								li: a(href='/keystone/signin') Login
 
 		//- BODY
 		#body
