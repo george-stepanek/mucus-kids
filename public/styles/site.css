@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(//fonts.googleapis.com/css?family=Kelly+Slab&effect=crackle);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5821,14 +5822,39 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  font-family: "Kelly Slab", sans-serif; }
+
 #header {
-  margin-top: 30px; }
+  margin-top: 10px;
+  font-size: 3.5em; }
+
+.navbar-default,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: transparent;
+  border-color: transparent; }
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1; }
+
+.container {
+  background: rgba(255, 255, 255, 0.75); }
 
 #footer {
   margin-top: 30px;
-  border-top: 1px solid #eeeeee;
-  padding-top: 30px;
-  color: #777777; }
+  border-top: 1px solid #777;
+  padding-top: 5px;
+  color: #777; }
 
 .gallery-image img {
   display: block;

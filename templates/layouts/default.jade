@@ -36,7 +36,7 @@ html
 	body
 
 		//- HEADER
-		#header: .container
+		#header
 
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
@@ -49,21 +49,24 @@ html
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						a.navbar-brand(href='/') Mucus Kids
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
-							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Admin
-								li: a(href='/keystone/signout') Logout
-							else
-								li: a(href='/keystone/signin') Login
+					.collapse.navbar-collapse.font-effect-crackle
+						strong
+							ul.nav.navbar-nav.navbar-left
+								each link in navLinks
+									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							ul.nav.navbar-nav.navbar-right
+								if user
+									if user.canAccessKeystone
+										li: a(href='/keystone') Admin
+									li: a(href='/keystone/signout') Logout
+								else
+									li: a(href='/keystone/signin' title='Login') *
 
 		//- BODY
 		#body
+
+			video(autoplay loop muted)
+				source(src="/videos/Song_of_the_Sex.mp4", type="video/mp4")
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
