@@ -6,8 +6,9 @@ mixin post(post)
 		p.lead.text-muted Posted 
 			if post.publishedDate
 				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
-		if post.image.exists
-			img(src=post._.image.fit(160,160)).img.pull-right
+			if post.image.exists
+				p
+					.image-wrap: img(src=post._.image.fit(750,450)).img-responsive
 		p!= post.content.brief
 		if post.content.extended
 			p.read-more: a(href='/news/' + post.slug) Read more...

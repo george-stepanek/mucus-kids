@@ -14,6 +14,7 @@ html
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
+		link(href="/fancybox/jquery.fancybox.css", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -66,7 +67,7 @@ html
 		#body
 
 			video(autoplay loop muted)
-				source(src="/videos/Song_of_the_Sex.mp4", type="video/mp4")
+				//source(src="/videos/Song_of_the_Sex.mp4", type="video/mp4")
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
@@ -105,6 +106,9 @@ html
 			script(src='/keystone/js/content/editor.js')
 
 		//- Add scripts that are globally required by your site here.
+		script(src='/fancybox/jquery.fancybox.pack.js')
+		script.
+			$(document).ready(function() { $(".fancybox").fancybox({ padding : 0 }); });
 
 		//- Include template-specific javascript files by extending the js block
 		block js
