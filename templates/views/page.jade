@@ -12,5 +12,6 @@ block content
 		if data.page
 			.post
 				if data.page.image.exists
-					.image-wrap: img(src=data.page._.image.fit(750,450)).img-responsive
+					p
+						.image-wrap: img(src=data.page._.image.fit(750,450)).img-responsive
 				!= data.page.content
