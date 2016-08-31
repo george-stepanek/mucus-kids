@@ -5,7 +5,7 @@ $puke-green: #a3c00f;
 
 body {
 	font-family: "Kelly Slab", sans-serif;
-	background: grey;
+	background: white;
 }
 
 #header {
@@ -51,6 +51,7 @@ video {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: -2;
+  opacity: 0.8;
 }
 
 .container {
@@ -64,8 +65,12 @@ video {
 	color: #777;
 }
 
-.gallery-image img{
+.gallery-image img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.form-control {
+    border-radius: 0;
 }

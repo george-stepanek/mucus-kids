@@ -5824,7 +5824,7 @@ button.close {
 
 body {
   font-family: "Kelly Slab", sans-serif;
-  background: grey; }
+  background: white; }
 
 #header {
   margin-top: 10px;
@@ -5863,7 +5863,8 @@ video {
   background-size: cover;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: -2; }
+  z-index: -2;
+  opacity: 0.8; }
 
 .container {
   background: rgba(255, 255, 255, 0.75); }
@@ -5878,3 +5879,6 @@ video {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.form-control {
+  border-radius: 0; }
