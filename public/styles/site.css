@@ -5872,8 +5872,13 @@ video {
 h1 {
   font-weight: bold; }
 
-h2 > a, li:not(.disabled) > a {
+h2 > a,
+li:not(.disabled) > a {
   color: #93b00f; }
+
+h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus {
+  color: #f1f114;
+  text-decoration: none; }
 
 .pagination > .active > a,
 .pagination > .active > a:hover,
@@ -5881,10 +5886,6 @@ h2 > a, li:not(.disabled) > a {
 .btn-primary {
   background-color: #93b00f;
   border-color: #93b00f; }
-
-h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus {
-  color: #f1f114;
-  text-decoration: none; }
 
 .btn-primary:hover, .btn-primary:focus {
   background-color: #f1f114;
@@ -5901,5 +5902,8 @@ h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus {
   max-width: 100%;
   height: auto; }
 
-.pagination > li:first-child > a, .pagination > li:last-child > a, .form-control, .btn-primary {
+.pagination > li:first-child > a,
+.pagination > li:last-child > a,
+.form-control,
+.btn-primary {
   border-radius: 0; }
