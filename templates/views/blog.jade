@@ -9,9 +9,8 @@ mixin post(post)
 			if post.image.exists
 				p
 					.image-wrap: img(src=post._.image.fit(750,450)).img-responsive
-		p!= post.content.brief
-		if post.content.extended
-			p.read-more: a(href='/news/' + post.slug) Read more...
+		p!= post.content
+		br(clear="all")
 
 block intro
 	.container

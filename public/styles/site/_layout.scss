@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Kelly+Slab&effect=crackle);
 
-$piss-yellow: #e1e114;
-$puke-green: #a3c00f;
+$piss-yellow: #f1f114;
+$puke-green: #93b00f;
 
 body {
 	font-family: "Kelly Slab", sans-serif;
@@ -56,6 +56,10 @@ video {
 
 .container {
 	background: rgba(255, 255, 255, 0.75);
+}
+
+h1 {
+    font-weight: bold;
 }
 
 #footer {

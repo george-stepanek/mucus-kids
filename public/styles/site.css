@@ -5839,10 +5839,10 @@ body {
 .navbar-default .navbar-nav > li a:hover,
 .navbar-default .navbar-nav > li a:focus {
   background: transparent;
-  color: #e1e114; }
+  color: #f1f114; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #a3c00f; }
+  color: #93b00f; }
 
 .logo {
   position: fixed;
@@ -5868,6 +5868,9 @@ video {
 
 .container {
   background: rgba(255, 255, 255, 0.75); }
+
+h1 {
+  font-weight: bold; }
 
 #footer {
   margin-top: 30px;

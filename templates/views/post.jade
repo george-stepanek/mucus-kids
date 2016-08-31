@@ -1,20 +1,18 @@
 extends ../layouts/default
 
 block content
-	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+	.container
 		article
-			p: a(href='/') &larr; back
-			hr
 			if !data.post
-				h2 Invalid Post.
+				h3 Page does not exist for this URL.
 			else
 				header
-					h1= data.post.title
-					h5 Posted 
+					h2= data.post.title
+					p.lead.text-muted Posted 
 						if data.post.publishedDate
 							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
 				.post
 					if data.post.image.exists
 						p
 							.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
-					!= data.post.content.full
+					p!= data.post.content
