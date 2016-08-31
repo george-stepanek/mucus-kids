@@ -62,6 +62,30 @@ h1 {
     font-weight: bold;
 }
 
+h2 > a, li:not(.disabled) > a {
+    color: $puke-green;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.btn-primary {
+    background-color: $puke-green;
+    border-color: $puke-green;
+}
+
+h2, li:not(.disabled) {
+    a:hover, a:focus {
+        color: $piss-yellow;
+        text-decoration: none
+    }
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: $piss-yellow;
+    border-color: $piss-yellow;
+}
+
 #footer {
 	margin-top: 30px;
 	border-top: 1px solid #777;
@@ -75,6 +99,6 @@ h1 {
     height: auto;
 }
 
-.form-control {
+.pagination > li:first-child > a, .pagination > li:last-child > a, .form-control, .btn-primary {
     border-radius: 0;
 }

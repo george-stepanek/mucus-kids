@@ -5872,6 +5872,24 @@ video {
 h1 {
   font-weight: bold; }
 
+h2 > a, li:not(.disabled) > a {
+  color: #93b00f; }
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.btn-primary {
+  background-color: #93b00f;
+  border-color: #93b00f; }
+
+h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus {
+  color: #f1f114;
+  text-decoration: none; }
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #f1f114;
+  border-color: #f1f114; }
+
 #footer {
   margin-top: 30px;
   border-top: 1px solid #777;
@@ -5883,5 +5901,5 @@ h1 {
   max-width: 100%;
   height: auto; }
 
-.form-control {
+.pagination > li:first-child > a, .pagination > li:last-child > a, .form-control, .btn-primary {
   border-radius: 0; }
