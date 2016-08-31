@@ -62,12 +62,12 @@ h1 {
     font-weight: bold;
 }
 
-h2 > a, 
+h2 > a, p > a,
 li:not(.disabled) > a {
     color: $puke-green;
 }
 
-h2, li:not(.disabled) {
+h2, li:not(.disabled), p {
     a:hover, a:focus {
         color: $piss-yellow;
         text-decoration: none

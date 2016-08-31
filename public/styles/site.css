@@ -5872,11 +5872,11 @@ video {
 h1 {
   font-weight: bold; }
 
-h2 > a,
+h2 > a, p > a,
 li:not(.disabled) > a {
   color: #93b00f; }
 
-h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus {
+h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus, p a:hover, p a:focus {
   color: #f1f114;
   text-decoration: none; }
 
