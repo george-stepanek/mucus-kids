@@ -58,19 +58,18 @@ video {
 	background: rgba(255, 255, 255, 0.75);
 }
 
-h1 {
+h1, .pagination > li > a {
     font-weight: bold;
 }
 
-h2 > a, p > a,
-li:not(.disabled) > a {
+h2 > a, p > a, .pagination > li:not(.disabled):not(.active) > a {
     color: $puke-green;
 }
 
-h2, li:not(.disabled), p {
+h2, .pagination > li:not(.disabled):not(.active), p {
     a:hover, a:focus {
         color: $piss-yellow;
-        text-decoration: none
+        text-decoration: none;
     }
 }
 

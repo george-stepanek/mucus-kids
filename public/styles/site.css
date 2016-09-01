@@ -5869,14 +5869,13 @@ video {
 .container {
   background: rgba(255, 255, 255, 0.75); }
 
-h1 {
+h1, .pagination > li > a {
   font-weight: bold; }
 
-h2 > a, p > a,
-li:not(.disabled) > a {
+h2 > a, p > a, .pagination > li:not(.disabled):not(.active) > a {
   color: #93b00f; }
 
-h2 a:hover, h2 a:focus, li:not(.disabled) a:hover, li:not(.disabled) a:focus, p a:hover, p a:focus {
+h2 a:hover, h2 a:focus, .pagination > li:not(.disabled):not(.active) a:hover, .pagination > li:not(.disabled):not(.active) a:focus, p a:hover, p a:focus {
   color: #f1f114;
   text-decoration: none; }
 
