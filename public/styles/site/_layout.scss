@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Kelly+Slab&effect=crackle);
 
-$piss-yellow: #f1f114;
-$puke-green: #93b00f;
+$yellow: #f1f114;
+$green: #93b00f;
 
 body {
 	font-family: "Kelly Slab", sans-serif;
@@ -22,12 +22,12 @@ body {
 .navbar-default .navbar-nav > li {
     a, a:hover, a:focus {
         background: rgba(0, 0, 0, 0);
-        color: $piss-yellow;
+        color: $yellow;
     }
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: $puke-green;
+	color: $green;
 }
 
 .logo {
@@ -63,12 +63,12 @@ h1, .pagination > li > a {
 }
 
 h2 > a, p > a, .pagination > li:not(.disabled):not(.active) > a {
-    color: $puke-green;
+    color: $green;
 }
 
 h2, .pagination > li:not(.disabled):not(.active), p {
     a:hover, a:focus {
-        color: $piss-yellow;
+        color: $yellow;
         text-decoration: none;
     }
 }
@@ -77,13 +77,13 @@ h2, .pagination > li:not(.disabled):not(.active), p {
 .pagination > .active > a:hover,
 .pagination > .active > a:focus,
 .btn-primary {
-    background-color: $puke-green;
-    border-color: $puke-green;
+    background-color: $green;
+    border-color: $green;
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background-color: $piss-yellow;
-    border-color: $piss-yellow;
+    background-color: $yellow;
+    border-color: $yellow;
 }
 
 #footer {

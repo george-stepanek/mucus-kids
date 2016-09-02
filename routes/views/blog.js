@@ -23,9 +23,7 @@ exports = module.exports = function (req, res) {
 			filters: {
 				state: 'published',
 			},
-		})
-			.sort('-publishedDate')
-			.populate('author');
+		}).sort('-publishedDate');
 
 		q.exec(function (err, results) {
 			locals.data.posts = results;
