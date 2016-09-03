@@ -3,21 +3,33 @@
 $yellow: #f1f114;
 $green: #93b00f;
 
+// -------- Global
+* {
+    border-radius: 0 !important;
+}
 body {
 	font-family: "Kelly Slab", sans-serif;
 	background: white;
 }
-
 #header {
 	margin-top: 10px;
 	font-size: 3.5em;
 }
+#footer {
+	margin-top: 30px;
+	border-top: 1px solid #777;
+	padding-top: 5px;
+	color: #777;
+}
+.container {
+	background: rgba(255, 255, 255, 0.75);
+}
 
+// -------- Navbar
 .navbar-default {
 	background: rgba(0, 0, 0, 0);
 	border-color: rgba(0, 0, 0, 0);
 }
-
 .navbar-default .navbar-nav > .active,
 .navbar-default .navbar-nav > li {
     a, a:hover, a:focus {
@@ -25,22 +37,11 @@ body {
         color: $yellow;
     }
 }
-
 .navbar-default .navbar-nav > li > a {
 	color: $green;
 }
 
-.logo {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  z-index: -1;
-  mix-blend-mode: multiply;
-}
-
+// -------- Background
 video {
   position: fixed;
   top: 50%;
@@ -53,26 +54,30 @@ video {
   z-index: -2;
   opacity: 0.8;
 }
-
-.container {
-	background: rgba(255, 255, 255, 0.75);
+.logo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: -1;
+  mix-blend-mode: multiply;
 }
 
+// -------- Pagination &tc.
 h1, .pagination > li > a {
     font-weight: bold;
 }
-
 h2 > a, p > a, .pagination > li:not(.disabled):not(.active) > a {
     color: $green;
 }
-
 h2, .pagination > li:not(.disabled):not(.active), p {
     a:hover, a:focus {
         color: $yellow;
         text-decoration: none;
     }
 }
-
 .pagination > .active > a,
 .pagination > .active > a:hover,
 .pagination > .active > a:focus,
@@ -80,28 +85,18 @@ h2, .pagination > li:not(.disabled):not(.active), p {
     background-color: $green;
     border-color: $green;
 }
-
 .btn-primary:hover, .btn-primary:focus {
     background-color: $yellow;
     border-color: $yellow;
 }
 
-#footer {
-	margin-top: 30px;
-	border-top: 1px solid #777;
-	padding-top: 5px;
-	color: #777;
+.comments {
+    font-size: 1.1em;
 }
 
+// -------- Gallery
 .gallery-image img {
     display: block;
     max-width: 100%;
     height: auto;
-}
-
-.pagination > li:first-child > a, 
-.pagination > li:last-child > a, 
-.form-control, 
-.btn-primary {
-    border-radius: 0;
 }

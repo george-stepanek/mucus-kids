@@ -10,33 +10,25 @@ mixin post(post)
 
 block intro
 	.container
-		h1 Comments
+		h1 Graffiti
 		
 block content
 	.container
 		if !enquirySubmitted
 			.row: .col-sm-8.col-md-6
+				br
 				form(method='post')
 					input(type='hidden', name='action', value='comment')
 					.form-group(class=validationErrors.message ? 'has-error' : null)
-						label Message
-						textarea(name='message', placeholder='Leave a comment...' rows=4).form-control= formData.message
+						textarea(name='message', placeholder='Say something...' rows=4).form-control= formData.message
 					.form-group
 						label Name
 						input(type='text', name='name', value=formData['name'], placeholder='(optional)').form-control
 					.form-actions
-						button(type='submit').btn.btn-primary Save
-		if data.posts.totalPages > 1
-			br
-			h4.text-weight-normal Showing 
-				strong #{data.posts.first}
-				|  to 
-				strong #{data.posts.last}
-				|  of 
-				strong #{data.posts.total}
-				|  comments.
+						button(type='submit').btn.btn-primary Say it
+					br
 		.row: .col-sm-12.col-md-8
-			.blog
+			.comments
 				each post in data.posts.results
 					+post(post)
 		if data.posts.totalPages > 1

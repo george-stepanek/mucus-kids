@@ -5822,6 +5822,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+* {
+  border-radius: 0 !important; }
+
 body {
   font-family: "Kelly Slab", sans-serif;
   background: white; }
@@ -5829,6 +5832,15 @@ body {
 #header {
   margin-top: 10px;
   font-size: 3.5em; }
+
+#footer {
+  margin-top: 30px;
+  border-top: 1px solid #777;
+  padding-top: 5px;
+  color: #777; }
+
+.container {
+  background: rgba(255, 255, 255, 0.75); }
 
 .navbar-default {
   background: transparent;
@@ -5844,16 +5856,6 @@ body {
 .navbar-default .navbar-nav > li > a {
   color: #93b00f; }
 
-.logo {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  z-index: -1;
-  mix-blend-mode: multiply; }
-
 video {
   position: fixed;
   top: 50%;
@@ -5866,8 +5868,15 @@ video {
   z-index: -2;
   opacity: 0.8; }
 
-.container {
-  background: rgba(255, 255, 255, 0.75); }
+.logo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: -1;
+  mix-blend-mode: multiply; }
 
 h1, .pagination > li > a {
   font-weight: bold; }
@@ -5890,19 +5899,10 @@ h2 a:hover, h2 a:focus, .pagination > li:not(.disabled):not(.active) a:hover, .p
   background-color: #f1f114;
   border-color: #f1f114; }
 
-#footer {
-  margin-top: 30px;
-  border-top: 1px solid #777;
-  padding-top: 5px;
-  color: #777; }
+.comments {
+  font-size: 1.1em; }
 
 .gallery-image img {
   display: block;
   max-width: 100%;
   height: auto; }
-
-.pagination > li:first-child > a,
-.pagination > li:last-child > a,
-.form-control,
-.btn-primary {
-  border-radius: 0; }

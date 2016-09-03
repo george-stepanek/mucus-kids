@@ -39,7 +39,7 @@ exports = module.exports = function (app) {
 	app.get('/pix', routes.views.gallery);
 	app.get('/page/:page', routes.views.page);
 	app.all('/contact', routes.views.contact);
-	app.all('/comments', routes.views.comment);
+	app.all('/graffiti', routes.views.comment);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
