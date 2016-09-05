@@ -14,19 +14,19 @@ block intro
 		
 block content
 	.container
-		if !enquirySubmitted
-			.row: .col-sm-8.col-md-6
+		.row: .col-sm-8.col-md-6
+			br
+			form(method='post')
+				input(type='hidden', name='action', value='comment')
+				input(type='hidden', name='isAdmin', value=user ? 'true' : 'false')
+				.form-group(class=validationErrors.message ? 'has-error' : null)
+					textarea(name='message', placeholder='Got something to say?' rows=3).form-control= formData.message
+				.form-group
+					label Name
+					input(type='text', name='name', value=formData['name'], placeholder='(optional)').form-control
+				.form-actions
+					button(type='submit').btn.btn-primary Say it
 				br
-				form(method='post')
-					input(type='hidden', name='action', value='comment')
-					.form-group(class=validationErrors.message ? 'has-error' : null)
-						textarea(name='message', placeholder='Got something to say?' rows=3).form-control= formData.message
-					.form-group
-						label Name
-						input(type='text', name='name', value=formData['name'], placeholder='(optional)').form-control
-					.form-actions
-						button(type='submit').btn.btn-primary Say it
-					br
 		.row: .col-sm-12.col-md-8
 			.comments
 				each post in data.posts.results

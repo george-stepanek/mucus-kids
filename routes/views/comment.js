@@ -42,7 +42,7 @@ exports = module.exports = function (req, res) {
 
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'name, message',
+			fields: 'name, message, isAdmin',
 			errorMessage: 'There was a problem submitting your comment:',
 		}, function (err) {
 			if (err) {
