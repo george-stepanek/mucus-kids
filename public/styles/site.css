@@ -5855,6 +5855,8 @@ body {
 
 .navbar-default .navbar-nav > li > a {
   color: #93b00f; }
+  .navbar-default .navbar-nav > li > a .glyphicon {
+    line-height: 0.3em; }
 
 video {
   position: fixed;
@@ -5901,6 +5903,9 @@ h2 a:hover, h2 a:focus, .pagination > li:not(.disabled):not(.active) a:hover, .p
 
 .comments {
   font-size: 1.1em; }
+
+.admin-comment {
+  color: #7b5804; }
 
 .gallery-image img {
   display: block;

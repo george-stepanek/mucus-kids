@@ -2,6 +2,7 @@
 
 $yellow: #f1f114;
 $green: #93b00f;
+$brown: #7b5804;
 
 // -------- Global
 * {
@@ -39,6 +40,9 @@ body {
 }
 .navbar-default .navbar-nav > li > a {
 	color: $green;
+    .glyphicon {
+        line-height: 0.3em;
+    }
 }
 
 // -------- Background
@@ -92,6 +96,9 @@ h2, .pagination > li:not(.disabled):not(.active), p {
 
 .comments {
     font-size: 1.1em;
+}
+.admin-comment {
+    color: $brown;
 }
 
 // -------- Gallery

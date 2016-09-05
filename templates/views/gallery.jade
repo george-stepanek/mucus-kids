@@ -14,7 +14,9 @@ block content
 				
 				.row.gallery-images
 					if gallery.heroImage.exists
-						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680))
+						.col-sm-4.col-md-4.gallery-image
+							a.fancybox(href=gallery.heroImage.url, rel=gallery.name)
+								img(src=gallery._.heroImage.limit(680,680))
 						.col-sm-8.col-md-8: .row
 							each image in gallery.images
 								.col-xs-6.col-sm-4.col-md-3.gallery-image

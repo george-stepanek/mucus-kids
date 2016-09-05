@@ -3,14 +3,14 @@ extends ../layouts/default
 mixin post(post)
 	.post(data-ks-editable=editable(user, { list: 'Comment', id: post.id }))
 		br(clear="all")
-		p= post.message
-		p
-			strong
-				em= post.name
+		p(class=post.isAdmin ? 'admin-comment' : null)= post.message
+			if post.name
+				strong &nbsp;&mdash;&nbsp;
+					em= post.name
 
 block intro
 	.container
-		h1 Graffiti
+		h1 Comments
 		
 block content
 	.container
@@ -20,7 +20,7 @@ block content
 				form(method='post')
 					input(type='hidden', name='action', value='comment')
 					.form-group(class=validationErrors.message ? 'has-error' : null)
-						textarea(name='message', placeholder='Say something...' rows=4).form-control= formData.message
+						textarea(name='message', placeholder='Got something to say?' rows=3).form-control= formData.message
 					.form-group
 						label Name
 						input(type='text', name='name', value=formData['name'], placeholder='(optional)').form-control

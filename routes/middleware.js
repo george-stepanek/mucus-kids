@@ -20,10 +20,10 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.user = req.user;
 	res.locals.navLinks = [
-		{ label: 'News', key: 'blog', href: '/' },
-		{ label: 'Pix', key: 'gallery', href: '/pix' },
-		{ label: 'Graffiti', key: 'comments', href: '/graffiti' },
-		{ label: 'Contact', key: 'contact', href: '/contact' },
+		{ label: '<span class="glyphicon glyphicon-list-alt" title="News"></span>', key: 'blog', href: '/' },
+		{ label: '<span class="glyphicon glyphicon-camera" title="Pix"></span>', key: 'gallery', href: '/pix' },
+		{ label: '<span class="glyphicon glyphicon-comment" title="Comments"></span>', key: 'comments', href: '/comments' },
+		{ label: '<span class="glyphicon glyphicon-envelope" title="Contact Us"></span>', key: 'contact', href: '/contact' },
 	];
 
 	var q = require('keystone').list('Page').model.find().where('state', 'published').sort('-publishedDate');

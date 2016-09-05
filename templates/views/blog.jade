@@ -20,14 +20,6 @@ block content
 	.container: .row
 		.col-sm-8.col-md-9
 			if data.posts.results.length
-				if data.posts.totalPages > 1
-					h4.text-weight-normal Showing 
-						strong #{data.posts.first}
-						|  to 
-						strong #{data.posts.last}
-						|  of 
-						strong #{data.posts.total}
-						|  posts.
 				.blog
 					each post in data.posts.results
 						+post(post)
