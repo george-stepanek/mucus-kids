@@ -12,7 +12,7 @@ html
 		if data.post		
 			meta(property="og:url", name="og:url", content=url)
 			meta(property="og:title", name="og:title", content=data.post.title)
-			if data.post.image
+			if data.post.image.exists
 				meta(property="og:image", name="og:image", content=data.post.image.url)
 
 		title= title || 'Mucus Kids'

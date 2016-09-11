@@ -22,7 +22,7 @@ block content
 							i.fa.fa-facebook
 						a.social(target="_blank", title="Tweet it", href="https://twitter.com/intent/tweet?tw_p=tweetbutton&url=" + url + "&text=" + data.post.title)
 							i.fa.fa-twitter
-						a.social(target="_blank" title="Pin it", href="https://www.pinterest.com/pin/create/button/?url=" + url + "&description=" + data.post.title + "&media=" + data.post.image.url)
+						a.social(target="_blank" title="Pin it", href="https://www.pinterest.com/pin/create/button/?url=" + url + "&description=" + data.post.title + (data.post.image.exists ? "&media=" + data.post.image.url : ""))
 							i.fa.fa-pinterest
 						a.social(target="_blank" title="Tumblr it" href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=" + url + "&title=" + data.post.title)
 							i.fa.fa-tumblr
