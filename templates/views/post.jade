@@ -16,3 +16,14 @@ block content
 						p
 							.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					p!= data.post.content
+					br
+					p
+						a.social(target="_blank", title="Share it", href="https://www.facebook.com/sharer/sharer.php?u=" + url)
+							i.fa.fa-facebook
+						a.social(target="_blank", title="Tweet it", href="https://twitter.com/intent/tweet?tw_p=tweetbutton&url=" + url + "&text=" + data.post.title)
+							i.fa.fa-twitter
+						a.social(target="_blank" title="Pin it", href="https://www.pinterest.com/pin/create/button/?url=" + url + "&description=" + data.post.title + "&media=" + data.post.image.url)
+							i.fa.fa-pinterest
+						a.social(target="_blank" title="Tumblr it" href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=" + url + "&title=" + data.post.title)
+							i.fa.fa-tumblr
+

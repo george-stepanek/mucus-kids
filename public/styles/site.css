@@ -5880,6 +5880,9 @@ video {
   z-index: -1;
   mix-blend-mode: multiply; }
 
+_:-ms-lang(x), .logo {
+  z-index: -3; }
+
 h1, .pagination > li > a {
   font-weight: bold; }
 
@@ -5906,6 +5909,10 @@ h2 a:hover, h2 a:focus, .pagination > li:not(.disabled):not(.active) a:hover, .p
 
 .admin-comment {
   color: #7b5804; }
+
+.social {
+  font-size: 1.5em;
+  margin-right: 20px; }
 
 .gallery-image img {
   display: block;

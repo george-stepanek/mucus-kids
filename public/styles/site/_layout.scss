@@ -68,6 +68,9 @@ video {
   z-index: -1;
   mix-blend-mode: multiply;
 }
+_:-ms-lang(x), .logo { // IE and Edge
+    z-index: -3;
+}
 
 // -------- Pagination &tc.
 h1, .pagination > li > a {
@@ -99,6 +102,11 @@ h2, .pagination > li:not(.disabled):not(.active), p {
 }
 .admin-comment {
     color: $brown;
+}
+
+.social {
+    font-size: 1.5em;
+    margin-right: 20px;
 }
 
 // -------- Gallery

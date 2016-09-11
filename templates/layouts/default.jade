@@ -9,12 +9,19 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
+		if data.post		
+			meta(property="og:url", name="og:url", content=url)
+			meta(property="og:title", name="og:title", content=data.post.title)
+			if data.post.image
+				meta(property="og:image", name="og:image", content=data.post.image.url)
+
 		title= title || 'Mucus Kids'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
 		link(href="/fancybox/jquery.fancybox.css", rel="stylesheet")
+		link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
