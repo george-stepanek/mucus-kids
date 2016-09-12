@@ -9,11 +9,14 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
+		meta(property="og:url", name="og:url", content=url)
 		if data && data.post		
-			meta(property="og:url", name="og:url", content=url)
 			meta(property="og:title", name="og:title", content=data.post.title)
 			if data.post.image.exists
 				meta(property="og:image", name="og:image", content=data.post.image.url)
+		else
+			meta(property="og:title", name="og:title", content='Mucus Kids')
+			meta(property="og:image", name="og:image", content='http://res.cloudinary.com/mucus-kids/image/upload/v1472593364/dqretf5tbpmnlef4optf.jpg')
 
 		title= title || 'Mucus Kids'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
