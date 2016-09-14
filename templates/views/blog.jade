@@ -1,17 +1,5 @@
 extends ../layouts/default
 
-mixin post(post)
-	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-		h2: a(href='/news/' + post.slug)= post.title
-		p.lead.text-muted Posted 
-			if post.publishedDate
-				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
-			if post.image.exists
-				p
-					.image-wrap: img(src=post._.image.fit(750,450)).img-responsive
-		p!= post.content
-		br(clear="all")
-
 block intro
 	.container
 		h1= 'News'

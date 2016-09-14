@@ -20,6 +20,7 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.user = req.user;
 	res.locals.url = req.protocol + '://' + req.get('host') + req.originalUrl;
+	res.locals.base = req.protocol + '://' + req.get('host');
 	res.locals.navLinks = [
 		{ label: '<span class="glyphicon glyphicon-list-alt" title="News"></span>', key: 'blog', href: '/' },
 		{ label: '<span class="glyphicon glyphicon-camera" title="Pix"></span>', key: 'gallery', href: '/pix' },

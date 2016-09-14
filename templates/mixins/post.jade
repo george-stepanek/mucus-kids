@@ -1,0 +1,23 @@
+mixin post(post)
+    .post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+        if url == base + "/news/" + post.slug
+            h2= post.title
+        else
+            h2: a(href='/news/' + post.slug)= post.title
+        if post.publishedDate
+            p.lead.text-muted Posted 
+                | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+        if post.image.exists
+            p.image-wrap: img(src=post._.image.fit(750,450)).img-responsive
+        p!= post.content
+        br(clear="all")
+        p 
+            em.social.text-muted Share:
+            a.social(target="_blank", title="Facebook it", href="https://www.facebook.com/sharer/sharer.php?u=" + base + "/news/" + post.slug)
+                i.fa.fa-facebook
+            a.social(target="_blank", title="Tweet it", href="https://twitter.com/intent/tweet?tw_p=tweetbutton&url=" + base + "/news/" + post.slug + "&text=" + post.title)
+                i.fa.fa-twitter
+            a.social(target="_blank" title="Pin it", href="https://www.pinterest.com/pin/create/button/?url=" + base + "/news/" + post.slug + "&description=" + post.title + (post.image.exists ? "&media=" + post.image.url : ""))
+                i.fa.fa-pinterest
+            a.social(target="_blank" title="Tumblr it" href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=" + base + "/news/" + post.slug + "&title=" + post.title)
+                i.fa.fa-tumblr
