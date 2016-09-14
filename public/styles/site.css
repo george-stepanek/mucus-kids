@@ -5934,8 +5934,9 @@ h2 a:hover, h2 a:focus, .pagination > li:not(.disabled):not(.active) a:hover, .p
   color: #7b5804; }
 
 .social {
-  font-size: 1.5em;
-  margin-right: 20px; }
+  margin-right: 10px; }
+  .social i {
+    font-size: 1.2em; }
 
 .gallery-image img {
   display: block;

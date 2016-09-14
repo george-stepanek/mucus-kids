@@ -4,15 +4,12 @@ mixin post(post)
             h2= post.title
         else
             h2: a(href='/news/' + post.slug)= post.title
-        if post.publishedDate
-            p.lead.text-muted Posted 
-                | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
-        if post.image.exists
-            p.image-wrap: img(src=post._.image.fit(750,450)).img-responsive
-        p!= post.content
-        br(clear="all")
         p 
-            em.social.text-muted Share:
+            if post.publishedDate
+                span.lead.text-muted Posted 
+                    | on #{post._.publishedDate.format('MMMM Do, YYYY')}
+                br
+            em.lead.social.text-muted Share:
             a.social(target="_blank", title="Facebook it", href="https://www.facebook.com/sharer/sharer.php?u=" + base + "/news/" + post.slug)
                 i.fa.fa-facebook
             a.social(target="_blank", title="Tweet it", href="https://twitter.com/intent/tweet?tw_p=tweetbutton&url=" + base + "/news/" + post.slug + "&text=" + post.title)
@@ -21,3 +18,7 @@ mixin post(post)
                 i.fa.fa-pinterest
             a.social(target="_blank" title="Tumblr it" href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=" + base + "/news/" + post.slug + "&title=" + post.title)
                 i.fa.fa-tumblr
+        if post.image.exists
+            p.image-wrap: img(src=post._.image.fit(750,450)).img-responsive
+        p!= post.content
+        br(clear="all")

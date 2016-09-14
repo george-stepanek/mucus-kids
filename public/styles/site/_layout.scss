@@ -136,8 +136,10 @@ h2, .pagination > li:not(.disabled):not(.active), p {
 }
 
 .social {
-    font-size: 1.5em;
-    margin-right: 20px;
+    margin-right: 10px;
+    i {
+        font-size: 1.2em;
+    }
 }
 
 // -------- Gallery
