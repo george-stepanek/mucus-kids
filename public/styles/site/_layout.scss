@@ -87,6 +87,7 @@ _:-ms-lang(x), .logo { // IE and Edge
     }
     .navbar-default .navbar-collapse {
         border-color: $transparent;
+    	box-shadow: none;
     }
     .navbar-default .navbar-toggle {
         background-color: $green;
