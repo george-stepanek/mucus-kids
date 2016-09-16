@@ -30,8 +30,8 @@ exports.initLocals = function (req, res, next) {
 
 	var q = require('keystone').list('Page').model.find().where('state', 'published').sort('-publishedDate');
 	q.exec(function (err, results) {
-		for(var i = 0; i < results.length; i++) {
-			res.locals.navLinks.push({ label: results[i].title, key: results[i].slug, href: "/page/" + results[i].slug});
+		for (var i = 0; i < results.length; i++) {
+			res.locals.navLinks.push({ label: results[i].title, key: results[i].slug, href: '/page/' + results[i].slug });
 		}
 		next(err);
 	});

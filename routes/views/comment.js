@@ -14,8 +14,8 @@ exports = module.exports = function (req, res) {
 	locals.data = {
 		posts: [],
 	};
-	
-	function loadPosts(next) {
+
+	function loadPosts (next) {
 		var q = keystone.list('Comment').paginate({
 			page: req.query.page || 1,
 			perPage: 5,

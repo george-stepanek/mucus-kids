@@ -13,7 +13,7 @@ Comment.add({
 	name: { type: Types.Text },
 	message: { type: Types.Textarea, required: true, initial: false },
 	createdAt: { type: Types.Datetime, required: true, default: Date.now },
-	isAdmin: {type: Types.Boolean, default: false },
+	isAdmin: { type: Types.Boolean, default: false },
 });
 
 Comment.defaultSort = '-createdAt';
