@@ -18,7 +18,7 @@ exports = module.exports = function (req, res) {
 	function loadPosts (next) {
 		var q = keystone.list('Comment').paginate({
 			page: req.query.page || 1,
-			perPage: 5,
+			perPage: 20,
 			maxPages: 10,
 		}).sort('-createdAt');
 
